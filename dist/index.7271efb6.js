@@ -35188,6 +35188,7 @@ var _reactRouterDom = require("3cae63fbb41e880e");
 var _FilterFunction = _interopRequireDefault(require("9da2e0cfa5230c9a"));
 var _useOnline = _interopRequireDefault(require("c1f819b138cbd8cc"));
 var _Constants = require("66f3638d9829a813");
+var _Banner = _interopRequireDefault(require("80bc6d48a6e0e33f"));
 var _jsxRuntime = require("dbc8d7661d78507b");
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -35198,15 +35199,17 @@ const Body = ()=>{
     const [searchText, updateSearchText] = (0, _react.useState)(""); // 1st usestate for searching value
     const [filteredRestraunt, updateFilteredRestraunt] = (0, _react.useState)([]); // 2nd usestate for rendering restolist we pass initial value of restrauntlist so that it initially rendered
     const [allRestraunt, updateAllRestraunt] = (0, _react.useState)([]);
+    const [banner, updateBanner] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         getRestraunt();
     }, []);
     async function getRestraunt() {
         const data = await fetch(_Constants.API_LINK);
         const json = await data.json();
-        // console.log(json);
-        updateFilteredRestraunt(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        updateAllRestraunt(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        // console.log(json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle.info);
+        updateFilteredRestraunt(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        updateAllRestraunt(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        updateBanner(json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle.info);
     }
     // return filteredRestraunt,allRestraunt;
     const isOnline = (0, _useOnline.default)();
@@ -35217,29 +35220,47 @@ const Body = ()=>{
     // if(filteredRestraunt?.length ===0){return <h1>no resto found</h1>}
     return allRestraunt.length === 0 ? /*#__PURE__*/ (0, _jsxRuntime.jsx)(_Shimmer.default, {}) : /*#__PURE__*/ (0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
         children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
-            className: "p-3 relative",
+            className: "flex-col justify-center ",
             children: [
+                /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                    className: "p-3 relative ",
+                    children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                        className: "p-2 absolute right-0 ",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
+                                "data-testid": "search-input",
+                                type: "text",
+                                placeholder: "Search here....",
+                                className: "p-3 m-2 border shadow-md rounded-md bg-orange-200",
+                                value: searchText,
+                                onChange: (e)=>{
+                                    updateSearchText(e.target.value);
+                                }
+                            }),
+                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
+                                "data-testid": "search-btn",
+                                className: "p-3 m-1 border rounded-lg shadow-md bg-orange-400 ",
+                                onClick: ()=>{
+                                    const data = (0, _FilterFunction.default)(searchText, allRestraunt);
+                                    updateFilteredRestraunt(data);
+                                },
+                                children: "Search"
+                            })
+                        ]
+                    })
+                }),
                 /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
-                    className: "p-2 absolute right-0",
+                    className: "px-5 border-b-0",
                     children: [
-                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
-                            "data-testid": "search-input",
-                            type: "text",
-                            placeholder: "Search here....",
-                            className: "p-3 m-2 border shadow-md rounded-md bg-orange-200",
-                            value: searchText,
-                            onChange: (e)=>{
-                                updateSearchText(e.target.value);
-                            }
+                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("h2", {
+                            className: "font-bold text-2xl p-4 mb-4 border-b",
+                            children: " What's On Your Mind"
                         }),
-                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
-                            "data-testid": "search-btn",
-                            className: "p-3 m-1 border rounded-lg shadow-md bg-orange-400 ",
-                            onClick: ()=>{
-                                const data = (0, _FilterFunction.default)(searchText, allRestraunt);
-                                updateFilteredRestraunt(data);
-                            },
-                            children: "Search"
+                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                            className: " justify-between px-5 mx-4 flex w-full overflow-x-hidden hover:overflow-x-scroll  scroll whitespace-nowrap scroll-smooth",
+                            children: banner.map((banners)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)(_Banner.default, {
+                                    info: banners
+                                }, banners.id))
                         })
                     ]
                 }),
@@ -35270,7 +35291,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"c30aad34686ae047":"ccr2P","2481c59d75fda5ac":"21dqq","dfdcad3f5b7c09c1":"g6ZGj","3cae63fbb41e880e":"9xmpe","9da2e0cfa5230c9a":"9wtBg","c1f819b138cbd8cc":"74Yls","66f3638d9829a813":"icYMm","dbc8d7661d78507b":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ccr2P":[function(require,module,exports) {
+},{"c30aad34686ae047":"ccr2P","2481c59d75fda5ac":"21dqq","dfdcad3f5b7c09c1":"g6ZGj","3cae63fbb41e880e":"9xmpe","9da2e0cfa5230c9a":"9wtBg","c1f819b138cbd8cc":"74Yls","66f3638d9829a813":"icYMm","80bc6d48a6e0e33f":"eQaZO","dbc8d7661d78507b":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ccr2P":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$af2e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35285,22 +35306,25 @@ exports.default = void 0;
 var _jsxRuntime = require("3f6b22a787425616");
 const Restaurantcard = ({ cloudinaryImageId, name, cuisines, avgRating })=>{
     return /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
-        className: "w-56 p-4 shadow-md m-4 my-5 rounded-md bg-red-100 h-96",
+        className: "hover:scale-110  w-56 p-4 shadow-md m-4 my-5 rounded-md bg-red-100 h-[415px]",
         children: [
             /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                className: "h-52 w-full rounded-md",
                 src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId
             }),
             /*#__PURE__*/ (0, _jsxRuntime.jsx)("h3", {
-                className: "font-bold",
+                className: "font-bold pt-2 mt-2",
                 children: name
             }),
             /*#__PURE__*/ (0, _jsxRuntime.jsx)("h4", {
+                className: "pt-2",
                 children: cuisines?.join(", ")
             }),
             /*#__PURE__*/ (0, _jsxRuntime.jsxs)("h5", {
+                className: "pt-2",
                 children: [
                     avgRating,
-                    " stars"
+                    " \u2B50"
                 ]
             })
         ]
@@ -35584,7 +35608,46 @@ const API_LINK = exports.API_LINK = "https://www.swiggy.com/dapi/restaurants/lis
  // Mineral Water	55/-
  // Fresh lime Water Sweet / Salt	60/-"};
 
-},{}],"cgAOG":[function(require,module,exports) {
+},{}],"eQaZO":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bb88 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bb88.prelude(module);
+
+try {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("de1857f5721281c0"));
+var _Constants = require("9c95d55802a4f166");
+var _jsxRuntime = require("d8dc2e793da548a9");
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+const Banner = ({ info })=>{
+    // const [imageId , action] = info;
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
+        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+            className: "hover:scale-110 h-36 rounded-full px-3",
+            src: _Constants.IMG_LINK + info.imageId
+        })
+    });
+};
+_c = Banner;
+var _default = exports.default = Banner;
+var _c;
+$RefreshReg$(_c, "Banner");
+
+  $parcel$ReactRefreshHelpers$bb88.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"de1857f5721281c0":"21dqq","9c95d55802a4f166":"icYMm","d8dc2e793da548a9":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cgAOG":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ee46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -40711,7 +40774,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _reactRouterDom = require("aee7a2828fd5f685");
 var _Shimmer = _interopRequireDefault(require("994a1d120d489865"));
-var _useRestraunt = _interopRequireDefault(require("33b57def0f8fefed"));
 var _Constants = require("6267d5fb7bcbf520");
 var _react = require("7d5ada2d69d2c839");
 var _UserContext = _interopRequireDefault(require("3b2eb0120378e9ac"));
@@ -40723,10 +40785,34 @@ function _interopRequireDefault(obj) {
         default: obj
     };
 }
+// import useRestraunt from "../utils/useRestraunt";
 const RestaurantMenu = ()=>{
     const { resId } = (0, _reactRouterDom.useParams)();
-    const restraunt = (0, _useRestraunt.default)(resId);
-    const { user } = (0, _react.useContext)(_UserContext.default);
+    const [restraunt, setrestraunt] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        setRestrauntMenu();
+    }, []);
+    async function setRestrauntMenu() {
+        const data = await fetch(_Constants.RESTO_API_LINK + resId);
+        const json = await data.json();
+        // console.log(Object.values(json?.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards));
+        setrestraunt(json?.data);
+        console.log(json.data);
+    }
+    const rating = restraunt?.cards[0].card?.card?.info?.totalRatingsString;
+    const distanceDetails = restraunt?.cards[0].card?.card?.info?.feeDetails.message;
+    const cuisines = restraunt?.cards[0].card?.card?.info?.cuisines;
+    const imageID = restraunt?.cards[0].card?.card?.info?.cloudinaryImageId;
+    const areaName = restraunt?.cards[0].card?.card?.info?.areaName;
+    const avgRating = restraunt?.cards[0].card?.card?.info?.avgRating;
+    const costForTwo = restraunt?.cards[0].card?.card?.info?.costForTwoMessage;
+    const name = restraunt?.cards[0].card?.card?.info?.name;
+    const Menu = restraunt?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card.card.itemCards;
+    // const Menu2 = restraunt?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1];
+    // const Menu = Object.values(MenuList);
+    // console.log(Object.values(Menu));
+    // console.log(Menu[0].card.info)
+    console.log(Menu);
     const dispatch = (0, _reactRedux.useDispatch)();
     const handleAddItem = ()=>{
         dispatch((0, _cartSlice.addItem)("grapes"));
@@ -40738,80 +40824,94 @@ const RestaurantMenu = ()=>{
         dispatch((0, _cartSlice.clearCart)());
     };
     return !restraunt ? /*#__PURE__*/ (0, _jsxRuntime.jsx)(_Shimmer.default, {}) : /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
-        className: "flex p-4",
+        className: "grid grid-cols-6 gap-4 top-7",
         children: [
-            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
-                className: "flex-col m-2",
-                children: [
-                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
-                        className: "w-80 p-3",
-                        src: _Constants.IMG_LINK + restraunt?.cards[0].card?.card?.info?.cloudinaryImageId
-                    }),
-                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
-                        className: "text-2xl",
-                        children: restraunt?.cards[0].card?.card?.info?.name
-                    }),
-                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("p", {
-                        children: [
-                            "menuId ",
-                            resId
-                        ]
-                    }),
-                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("h3", {
-                        children: restraunt?.cards[0].card?.card?.info?.areaName
-                    }),
-                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("h3", {
-                        children: [
-                            restraunt?.cards[0].card?.card?.info?.avgRating,
-                            " Stars"
-                        ]
-                    }),
-                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("h3", {
-                        children: restraunt?.cards[0].card?.card?.info?.costForTwoMessage
-                    }),
-                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("h3", {
-                        children: user.name
-                    })
-                ]
+            /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                className: "border-b col-start-2 col-span-4 p-3 mt-6 m-2 pt-3",
+                children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                    className: "flex justify-between",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                            className: "",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                                    className: "h-36 p-3 rounded-xl ",
+                                    src: _Constants.IMG_LINK + imageID
+                                }),
+                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
+                                    className: "text-2xl font-mono py-3",
+                                    children: name
+                                }),
+                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("h3", {
+                                    className: "font-serif ",
+                                    children: cuisines.join(" , ")
+                                }),
+                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("h3", {
+                                    className: "",
+                                    children: areaName
+                                }),
+                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("h3", {
+                                    className: "",
+                                    children: costForTwo
+                                }),
+                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("h3", {
+                                    className: "",
+                                    children: distanceDetails
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                            className: "border-b h-20 ",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxRuntime.jsxs)("h2", {
+                                    className: "font-medium border-b ",
+                                    children: [
+                                        avgRating,
+                                        " \u2B50"
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("h4", {
+                                    className: "font-thin ",
+                                    children: rating
+                                })
+                            ]
+                        })
+                    ]
+                })
             }),
             /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
-                className: "flex-row p-4",
+                className: "col-start-2 col-span-4 py-5 ",
                 children: [
                     /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
-                        className: "text-xl underline",
+                        className: "text-3xl border-b pt-5 mt-5",
                         children: "Menu"
                     }),
-                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
-                        className: "p-2 m-1 bg-orange-100",
-                        onClick: ()=>handleAddItem(),
-                        children: "Add Item"
-                    }),
-                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
-                        className: "p-2 m-1 bg-red-100",
-                        onClick: ()=>handleRemoveItem(),
-                        children: "Remove Item"
-                    }),
-                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
-                        className: "p-2 m-1 bg-purple-100",
-                        onClick: ()=>handleClearCartItem(),
-                        children: "Clear cart"
-                    }),
-                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("ol", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
-                                children: '"French Fries":106'
-                            }),
-                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
-                                children: '"French Fries":106'
-                            }),
-                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
-                                children: '"French Fries":106'
-                            }),
-                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
-                                children: '"French Fries":106'
-                            })
-                        ]
-                    })
+                    Menu.map((data)=>/*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                            className: "border-b py-5 my-6 flex flex-row-reverse",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                                    children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                                        className: "h-56 rounded-md shadow-xl",
+                                        src: _Constants.IMG_LINK + data.card.info.imageId
+                                    })
+                                }),
+                                /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                                    className: "py-4",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                                            className: "font-medium w-1/2 py-1",
+                                            children: data.card.info.name
+                                        }),
+                                        " \u20B9",
+                                        data.card.info.price / 100,
+                                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                                            className: "w-1/2 font-extralight py-4",
+                                            children: data.card.info.description
+                                        })
+                                    ]
+                                })
+                            ]
+                        }, data.card.info.id))
                 ]
             })
         ]
@@ -40827,41 +40927,7 @@ $RefreshReg$(_c, "RestaurantMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"aee7a2828fd5f685":"9xmpe","994a1d120d489865":"g6ZGj","33b57def0f8fefed":"5hfcq","6267d5fb7bcbf520":"icYMm","7d5ada2d69d2c839":"21dqq","3b2eb0120378e9ac":"c5vgB","5969835736dc5940":"5RXlr","c07afb5f874c6c91":"62sf7","b7e4b5fe8d618cd6":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5hfcq":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ea14 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ea14.prelude(module);
-
-try {
-"use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = void 0;
-var _react = require("c4cf97b5133d3fa4");
-var _Constants = require("7565b08b85a272e3");
-const useRestraunt = (resId)=>{
-    const [restraunt, setrestraunt] = (0, _react.useState)(null);
-    (0, _react.useEffect)(()=>{
-        setRestrauntMenu();
-    }, []);
-    async function setRestrauntMenu() {
-        const data = await fetch(_Constants.RESTO_API_LINK + resId);
-        const json = await data.json();
-        console.log(json?.data);
-        setrestraunt(json?.data);
-    }
-    return restraunt;
-};
-var _default = exports.default = useRestraunt;
-
-  $parcel$ReactRefreshHelpers$ea14.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"c4cf97b5133d3fa4":"21dqq","7565b08b85a272e3":"icYMm","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5RXlr":[function(require,module,exports) {
+},{"aee7a2828fd5f685":"9xmpe","994a1d120d489865":"g6ZGj","6267d5fb7bcbf520":"icYMm","7d5ada2d69d2c839":"21dqq","3b2eb0120378e9ac":"c5vgB","5969835736dc5940":"5RXlr","c07afb5f874c6c91":"62sf7","b7e4b5fe8d618cd6":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5RXlr":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
