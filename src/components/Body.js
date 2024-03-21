@@ -52,9 +52,11 @@ const Body = ()=>{
 
         <div className="px-5 border-b-0">
         <h2 className="font-bold text-2xl p-4 mb-4 border-b"> What's On Your Mind</h2>
-        <div className=" justify-between px-5 mx-4 flex w-full overflow-x-hidden hover:overflow-x-scroll  scroll whitespace-nowrap scroll-smooth">
+        <div className="grid grid-cols-6 gap-4">
+        <div className="col-start-2 col-span-4 justify-between px-5 mx-4 flex w-full overflow-x-hidden hover:overflow-x-auto  hover:overflow-y-hidden scroll whitespace-nowrap scroll-smooth">
           {banner.map((banners) => <Banner info = {banners} key = {banners.id}/>)}</div>
-        </div>  
+        </div> 
+        </div> 
 
         <div className="flex flex-wrap p-9 m-16 " data-testid="res_list">
         {filteredRestraunt.map((restraunt) =>{ // restrauntlist se sar saman restraunt show m aarha h fir usko hmlog restrauntcard m map krdiye h restocard basically jo hm banaye h different divvs m wahi h...aur spread operator iss liye use h cos hrr restolist ka object argument jaisa pass hojae 

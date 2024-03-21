@@ -14,7 +14,7 @@ const Headingcomponent =() => {
 
     return(
         <>
-    <div className="flex justify-between bg-white border shadow-md sticky top-0 z-10">
+    <div className="flex justify-between border-b shadow-lg bg-slate-50 sticky top-0 z-10 ">
         {heading}
         <div className="">
             <ul className="flex space-x-5 flex-row-right p-3 m-2">

@@ -17,7 +17,8 @@ const SignupForm = () => {
     },
   });
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form onSubmit={formik.handleSubmit} className='flex flex-col'>
+    <div>
       <label htmlFor="firstName">First Name</label>
       <input
         id="firstName"
@@ -25,8 +26,12 @@ const SignupForm = () => {
         type="text"
         onChange={formik.handleChange}
         value={formik.values.firstName}
+        className='border mb-5 pl-3 ml-8 shadow-lg rounded-xl p-2 '
+        placeholder='first name'
       />
+      </div>
 
+      <div>
       <label htmlFor="lastName">Last Name</label>
       <input
         id="lastName"
@@ -34,8 +39,12 @@ const SignupForm = () => {
         type="text"
         onChange={formik.handleChange}
         value={formik.values.lastName}
+        className='border mb-5 pl-3 ml-9 shadow-lg rounded-xl p-2 '
+        placeholder='last name'
       />
+      </div>
 
+      <div>
       <label htmlFor="email">Email Address</label>
       <input
         id="email"
@@ -43,9 +52,13 @@ const SignupForm = () => {
         type="email"
         onChange={formik.handleChange}
         value={formik.values.email}
+        className='border mb-5 pl-3 ml-3 shadow-lg rounded-xl p-2 '
+        placeholder='@gmail.com'
       />
+      </div>
 
-      <button type="submit">Submit</button>
+
+      <button type="submit" className='border bg-green-50 w-1/2 hover:bg-green-200 hover:scale-90 rounded-lg shadow-md'>Submit</button>
     </form>
   );
 };

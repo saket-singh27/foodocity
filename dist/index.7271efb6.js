@@ -26446,7 +26446,7 @@ const Headingcomponent = ()=>{
     const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
     return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
         children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
-            className: "flex justify-between bg-white border shadow-md sticky top-0 z-10",
+            className: "flex justify-between border-b shadow-lg bg-slate-50 sticky top-0 z-10 ",
             children: [
                 heading,
                 /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
@@ -35155,8 +35155,260 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _jsxRuntime = require("ceaef6f670bb49dc");
 const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)("h4", {
-        children: "this is footer"
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("footer", {
+            className: "bg-white dark:bg-gray-900 static bottom-0 ",
+            children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                className: "mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8",
+                children: [
+                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                        className: "md:flex md:justify-between",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                                className: "mb-6 md:mb-0",
+                                children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("a", {
+                                    href: "",
+                                    className: "flex items-center",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                                            src: "https://i.pinimg.com/564x/2b/a8/7f/2ba87f564a20384b9e2e2b8a33d35f8e.jpg",
+                                            className: "h-8 me-3",
+                                            alt: "FlowBite Logo"
+                                        }),
+                                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("span", {
+                                            className: "self-center text-2xl font-semibold whitespace-nowrap dark:text-white",
+                                            children: "Foodocity"
+                                        })
+                                    ]
+                                })
+                            }),
+                            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                                className: "grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("h2", {
+                                                className: "mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white",
+                                                children: "Resources"
+                                            }),
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("ul", {
+                                                className: "text-gray-500 dark:text-gray-400 font-medium",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
+                                                        className: "mb-4",
+                                                        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("a", {
+                                                            href: "#",
+                                                            className: "hover:underline",
+                                                            children: "Foodocity"
+                                                        })
+                                                    }),
+                                                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
+                                                        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("a", {
+                                                            href: "#",
+                                                            className: "hover:underline",
+                                                            children: "Contact us"
+                                                        })
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("h2", {
+                                                className: "mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white",
+                                                children: "Follow us"
+                                            }),
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("ul", {
+                                                className: "text-gray-500 dark:text-gray-400 font-medium",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
+                                                        className: "mb-4",
+                                                        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("a", {
+                                                            href: "https://github.com/saket-singh27",
+                                                            className: "hover:underline ",
+                                                            children: "Github"
+                                                        })
+                                                    }),
+                                                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
+                                                        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("a", {
+                                                            href: "https://discord.gg",
+                                                            className: "hover:underline",
+                                                            children: "Discord"
+                                                        })
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("h2", {
+                                                className: "mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white",
+                                                children: "Legal"
+                                            }),
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("ul", {
+                                                className: "text-gray-500 dark:text-gray-400 font-medium",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
+                                                        className: "mb-4",
+                                                        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("a", {
+                                                            href: "#",
+                                                            class: "hover:underline",
+                                                            children: "Privacy Policy"
+                                                        })
+                                                    }),
+                                                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("li", {
+                                                        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("a", {
+                                                            href: "#",
+                                                            class: "hover:underline",
+                                                            children: "Terms & Conditions"
+                                                        })
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("hr", {
+                        className: "my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+                    }),
+                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                        className: "sm:flex sm:items-center sm:justify-between",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("span", {
+                                className: "text-sm text-gray-500 sm:text-center dark:text-gray-400",
+                                children: [
+                                    "\xa9 2023 ",
+                                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("a", {
+                                        href: "#",
+                                        class: "hover:underline",
+                                        children: "Foodocity\u2122"
+                                    }),
+                                    ". All Rights Reserved."
+                                ]
+                            }),
+                            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                                className: "flex mt-4 sm:justify-center sm:mt-0",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("a", {
+                                        href: "#",
+                                        className: "text-gray-500 hover:text-gray-900 dark:hover:text-white",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("svg", {
+                                                className: "w-4 h-4",
+                                                "aria-hidden": "true",
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                fill: "currentColor",
+                                                viewBox: "0 0 8 19",
+                                                children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("path", {
+                                                    "fill-rule": "evenodd",
+                                                    d: "M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z",
+                                                    "clip-rule": "evenodd"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("span", {
+                                                className: "sr-only",
+                                                children: "Facebook page"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("a", {
+                                        href: "#",
+                                        className: "text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("svg", {
+                                                className: "w-4 h-4",
+                                                "aria-hidden": "true",
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                fill: "currentColor",
+                                                viewBox: "0 0 21 16",
+                                                children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("path", {
+                                                    d: "M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("span", {
+                                                className: "sr-only",
+                                                children: "Discord community"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("a", {
+                                        href: "#",
+                                        className: "text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("svg", {
+                                                className: "w-4 h-4",
+                                                "aria-hidden": "true",
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                fill: "currentColor",
+                                                viewBox: "0 0 20 17",
+                                                children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("path", {
+                                                    "fill-rule": "evenodd",
+                                                    d: "M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z",
+                                                    "clip-rule": "evenodd"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("span", {
+                                                className: "sr-only",
+                                                children: "Twitter page"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("a", {
+                                        href: "#",
+                                        className: "text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("svg", {
+                                                className: "w-4 h-4",
+                                                "aria-hidden": "true",
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                fill: "currentColor",
+                                                viewBox: "0 0 20 20",
+                                                children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("path", {
+                                                    "fill-rule": "evenodd",
+                                                    d: "M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z",
+                                                    "clip-rule": "evenodd"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("span", {
+                                                className: "sr-only",
+                                                children: "GitHub account"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("a", {
+                                        href: "#",
+                                        className: "text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("svg", {
+                                                className: "w-4 h-4",
+                                                "aria-hidden": "true",
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                fill: "currentColor",
+                                                viewBox: "0 0 20 20",
+                                                children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("path", {
+                                                    "fill-rule": "evenodd",
+                                                    d: "M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z",
+                                                    "clip-rule": "evenodd"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("span", {
+                                                className: "sr-only",
+                                                children: "Dribbble account"
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
+            })
+        })
     });
 };
 _c = Footer;
@@ -35257,10 +35509,13 @@ const Body = ()=>{
                             children: " What's On Your Mind"
                         }),
                         /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
-                            className: " justify-between px-5 mx-4 flex w-full overflow-x-hidden hover:overflow-x-scroll  scroll whitespace-nowrap scroll-smooth",
-                            children: banner.map((banners)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)(_Banner.default, {
-                                    info: banners
-                                }, banners.id))
+                            className: "grid grid-cols-6 gap-4",
+                            children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                                className: "col-start-2 col-span-4 justify-between px-5 mx-4 flex w-full overflow-x-hidden hover:overflow-x-auto  hover:overflow-y-hidden scroll whitespace-nowrap scroll-smooth",
+                                children: banner.map((banners)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)(_Banner.default, {
+                                        info: banners
+                                    }, banners.id))
+                            })
                         })
                     ]
                 }),
@@ -35668,14 +35923,21 @@ function _interopRequireDefault(obj) {
 }
 const Contact = ()=>{
     return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
-        children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
-            className: "signup-form",
-            children: [
-                /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
-                    children: "FILL THE FORM IN CASE OF ANY QUERY"
-                }),
-                /*#__PURE__*/ (0, _jsxRuntime.jsx)(_signupForm.default, {})
-            ]
+        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+            className: "signup-form grid grid-cols-6 gap-4 h-1/2",
+            children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                className: "col-start-2 col-span-4 py-3 mt-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
+                        className: "border-b font-sans text-2xl pb-2 bold",
+                        children: "FILL THE FORM IN CASE OF ANY QUERY"
+                    }),
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                        className: "col-start-2 col-span-4 py-5 ",
+                        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)(_signupForm.default, {})
+                    })
+                ]
+            })
         })
     });
 };
@@ -35726,42 +35988,62 @@ const SignupForm = ()=>{
     });
     return /*#__PURE__*/ (0, _jsxRuntime.jsxs)("form", {
         onSubmit: formik.handleSubmit,
+        className: "flex flex-col",
         children: [
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
-                htmlFor: "firstName",
-                children: "First Name"
+            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
+                        htmlFor: "firstName",
+                        children: "First Name"
+                    }),
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
+                        id: "firstName",
+                        name: "firstName",
+                        type: "text",
+                        onChange: formik.handleChange,
+                        value: formik.values.firstName,
+                        className: "border mb-5 pl-3 ml-8 shadow-lg rounded-xl p-2 ",
+                        placeholder: "first name"
+                    })
+                ]
             }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
-                id: "firstName",
-                name: "firstName",
-                type: "text",
-                onChange: formik.handleChange,
-                value: formik.values.firstName
+            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
+                        htmlFor: "lastName",
+                        children: "Last Name"
+                    }),
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
+                        id: "lastName",
+                        name: "lastName",
+                        type: "text",
+                        onChange: formik.handleChange,
+                        value: formik.values.lastName,
+                        className: "border mb-5 pl-3 ml-9 shadow-lg rounded-xl p-2 ",
+                        placeholder: "last name"
+                    })
+                ]
             }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
-                htmlFor: "lastName",
-                children: "Last Name"
-            }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
-                id: "lastName",
-                name: "lastName",
-                type: "text",
-                onChange: formik.handleChange,
-                value: formik.values.lastName
-            }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
-                htmlFor: "email",
-                children: "Email Address"
-            }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
-                id: "email",
-                name: "email",
-                type: "email",
-                onChange: formik.handleChange,
-                value: formik.values.email
+            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("label", {
+                        htmlFor: "email",
+                        children: "Email Address"
+                    }),
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
+                        id: "email",
+                        name: "email",
+                        type: "email",
+                        onChange: formik.handleChange,
+                        value: formik.values.email,
+                        className: "border mb-5 pl-3 ml-3 shadow-lg rounded-xl p-2 ",
+                        placeholder: "@gmail.com"
+                    })
+                ]
             }),
             /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
                 type: "submit",
+                className: "border bg-green-50 w-1/2 hover:bg-green-200 hover:scale-90 rounded-lg shadow-md",
                 children: "Submit"
             })
         ]
@@ -40701,15 +40983,46 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _jsxRuntime = require("9aff5c9ea7aa2f6c");
 const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)(_jsxRuntime.Fragment, {
-        children: [
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
-                children: "this is about us page"
-            }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("p", {
-                children: "heyyya!!!:"
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
+        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("section", {
+            className: "bg-white ",
+            children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                className: "gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6",
+                children: [
+                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                        className: "font-light sm:text-lg dark:text-gray-700",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("h2", {
+                                className: "mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ",
+                                children: "We didn't reinvent the wheel"
+                            }),
+                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("p", {
+                                className: "mb-4",
+                                children: "We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need."
+                            }),
+                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("p", {
+                                children: "We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick."
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                        className: "grid grid-cols-2 gap-4 mt-8",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                                className: "w-full rounded-lg",
+                                src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png",
+                                alt: "office content 1"
+                            }),
+                            /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                                className: "mt-4 w-full lg:mt-10 rounded-lg",
+                                src: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png",
+                                alt: "office content 2"
+                            })
+                        ]
+                    })
+                ]
             })
-        ]
+        })
     });
 };
 _c = About;
@@ -40776,7 +41089,6 @@ var _reactRouterDom = require("aee7a2828fd5f685");
 var _Shimmer = _interopRequireDefault(require("994a1d120d489865"));
 var _Constants = require("6267d5fb7bcbf520");
 var _react = require("7d5ada2d69d2c839");
-var _UserContext = _interopRequireDefault(require("3b2eb0120378e9ac"));
 var _cartSlice = require("5969835736dc5940");
 var _reactRedux = require("c07afb5f874c6c91");
 var _jsxRuntime = require("b7e4b5fe8d618cd6");
@@ -40785,7 +41097,6 @@ function _interopRequireDefault(obj) {
         default: obj
     };
 }
-// import useRestraunt from "../utils/useRestraunt";
 const RestaurantMenu = ()=>{
     const { resId } = (0, _reactRouterDom.useParams)();
     const [restraunt, setrestraunt] = (0, _react.useState)(null);
@@ -40795,9 +41106,7 @@ const RestaurantMenu = ()=>{
     async function setRestrauntMenu() {
         const data = await fetch(_Constants.RESTO_API_LINK + resId);
         const json = await data.json();
-        // console.log(Object.values(json?.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards));
         setrestraunt(json?.data);
-        console.log(json.data);
     }
     const rating = restraunt?.cards[0].card?.card?.info?.totalRatingsString;
     const distanceDetails = restraunt?.cards[0].card?.card?.info?.feeDetails.message;
@@ -40808,20 +41117,9 @@ const RestaurantMenu = ()=>{
     const costForTwo = restraunt?.cards[0].card?.card?.info?.costForTwoMessage;
     const name = restraunt?.cards[0].card?.card?.info?.name;
     const Menu = restraunt?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card.card.itemCards;
-    // const Menu2 = restraunt?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1];
-    // const Menu = Object.values(MenuList);
-    // console.log(Object.values(Menu));
-    // console.log(Menu[0].card.info)
-    console.log(Menu);
     const dispatch = (0, _reactRedux.useDispatch)();
-    const handleAddItem = ()=>{
-        dispatch((0, _cartSlice.addItem)("grapes"));
-    };
-    const handleRemoveItem = ()=>{
-        dispatch((0, _cartSlice.removeItem)());
-    };
-    const handleClearCartItem = ()=>{
-        dispatch((0, _cartSlice.clearCart)());
+    const handleAddItem = (data)=>{
+        dispatch((0, _cartSlice.addItem)(data));
     };
     return !restraunt ? /*#__PURE__*/ (0, _jsxRuntime.jsx)(_Shimmer.default, {}) : /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
         className: "grid grid-cols-6 gap-4 top-7",
@@ -40889,11 +41187,18 @@ const RestaurantMenu = ()=>{
                     Menu.map((data)=>/*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
                             className: "border-b py-5 my-6 flex flex-row-reverse",
                             children: [
-                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
-                                    children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
-                                        className: "h-56 rounded-md shadow-xl",
-                                        src: _Constants.IMG_LINK + data.card.info.imageId
-                                    })
+                                /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                                            className: "h-56 rounded-md shadow-xl ",
+                                            src: _Constants.IMG_LINK + data.card.info.imageId
+                                        }),
+                                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
+                                            className: "mt-4 shadow-lg rounded-lg w-full border hover:scale-110 hover:bg-green-300 font-light p-1 bg-gray-200",
+                                            onClick: ()=>handleAddItem(data),
+                                            children: "Add Item+"
+                                        })
+                                    ]
                                 }),
                                 /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
                                     className: "py-4",
@@ -40927,7 +41232,7 @@ $RefreshReg$(_c, "RestaurantMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"aee7a2828fd5f685":"9xmpe","994a1d120d489865":"g6ZGj","6267d5fb7bcbf520":"icYMm","7d5ada2d69d2c839":"21dqq","3b2eb0120378e9ac":"c5vgB","5969835736dc5940":"5RXlr","c07afb5f874c6c91":"62sf7","b7e4b5fe8d618cd6":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5RXlr":[function(require,module,exports) {
+},{"aee7a2828fd5f685":"9xmpe","994a1d120d489865":"g6ZGj","6267d5fb7bcbf520":"icYMm","7d5ada2d69d2c839":"21dqq","5969835736dc5940":"5RXlr","c07afb5f874c6c91":"62sf7","b7e4b5fe8d618cd6":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5RXlr":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -44899,70 +45204,19 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = require("a59def013504367");
 var _jsxRuntime = require("eee1b7e9fb7b21db");
-const Section = ({ title, discription, isVisible, setIsVisible })=>{
-    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)(_jsxRuntime.Fragment, {
-        children: [
-            console.log(setIsVisible),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
-                children: title
-            }),
-            isVisible ? /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
-                onClick: ()=>{
-                    setIsVisible(false);
-                },
-                children: "hide"
-            }) : /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
-                onClick: ()=>{
-                    setIsVisible(true);
-                },
-                children: "show"
-            }),
-            isVisible && /*#__PURE__*/ (0, _jsxRuntime.jsx)("p", {
-                children: discription
-            })
-        ]
-    });
-};
-_c = Section;
 const Instamart = ()=>{
-    const [visibleSection, setVisibleSection] = (0, _react.useState)("");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)(_jsxRuntime.Fragment, {
-        children: [
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
-                children: "Instamart"
-            }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)(Section, {
-                title: "about_instamart",
-                discription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-                isVisible: visibleSection == "about",
-                setIsVisible: ()=>{
-                    setVisibleSection("about");
-                }
-            }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)(Section, {
-                title: "details of instamart",
-                discription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-                isVisible: visibleSection === "details",
-                setIsVisible: ()=>{
-                    setVisibleSection("details");
-                }
-            }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)(Section, {
-                title: "team instamart",
-                discription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-                isVisible: visibleSection === "teams",
-                setIsVisible: ()=>{
-                    setVisibleSection("teams");
-                }
-            })
-        ]
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+        className: "grid grid-cols-6 gap-4 p-3 ",
+        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+            className: "col-start-2 col-span-4 rounded-lg shadow-lg",
+            src: "https://cdn.pixabay.com/photo/2015/09/07/08/22/under-928246_1280.jpg"
+        })
     });
 };
-_c1 = Instamart;
+_c = Instamart;
 var _default = exports.default = Instamart;
-var _c, _c1;
-$RefreshReg$(_c, "Section");
-$RefreshReg$(_c1, "Instamart");
+var _c;
+$RefreshReg$(_c, "Instamart");
 
   $parcel$ReactRefreshHelpers$8238.postlude(module);
 } finally {
@@ -45003,6 +45257,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _reactRedux = require("4ed0b545dc7d1a84");
 var _cartSlice = require("92e50d1422ce26d8");
+var _Constants = require("bb7c6fd96ae74e05");
 var _jsxRuntime = require("7c4152ef60a117b4");
 const Cart = ()=>{
     const dispatch = (0, _reactRedux.useDispatch)();
@@ -45010,22 +45265,69 @@ const Cart = ()=>{
         dispatch((0, _cartSlice.clearCart)());
     };
     const cardItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
-    /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
-        children: "cardItems"
-    });
+    // console.log(cardItems)
     return /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+        className: "grid grid-cols-6 gap-4 top-7",
         children: [
-            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("h1", {
-                className: "text-3xl p-4",
+            /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                className: "col-start-2 col-span-4 flex py-2 justify-between border-b",
                 children: [
-                    "Cart items - ",
-                    cardItems.length
+                    /*#__PURE__*/ (0, _jsxRuntime.jsxs)("h1", {
+                        className: "text-3xl pt-3",
+                        children: [
+                            "Cart items - ",
+                            cardItems.length
+                        ]
+                    }),
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
+                        className: "p-4 m-2 bg-green-100",
+                        onClick: ()=>handleClearcart(),
+                        children: "Clear cart"
+                    })
                 ]
             }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
-                className: "p-4 m-2 bg-green-100",
-                onClick: ()=>handleClearcart(),
-                children: "Clear cart"
+            cardItems.length > 0 ? /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                className: "col-start-2 col-span-4 py-5 ",
+                children: [
+                    cardItems.map((data)=>/*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                            className: "border-b py-5 my-6 flex flex-row-reverse",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                                    children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                                        className: "h-56 rounded-md shadow-xl ",
+                                        src: _Constants.IMG_LINK + data.card.info.imageId
+                                    })
+                                }),
+                                /*#__PURE__*/ (0, _jsxRuntime.jsxs)("div", {
+                                    className: "py-4",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                                            className: "font-medium w-1/2 py-1",
+                                            children: data.card.info.name
+                                        }),
+                                        " \u20B9",
+                                        data.card.info.price / 100,
+                                        /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                                            className: "w-1/2 font-extralight py-4",
+                                            children: data.card.info.description
+                                        })
+                                    ]
+                                })
+                            ]
+                        }, data.card.info.id)),
+                    /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
+                            className: "border w-auto p-4 bg-green-200 hover:scale-90",
+                            children: "Proceed To Checkout"
+                        })
+                    })
+                ]
+            }) : /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+                className: " col-start-3 col-span-4 h-svh ",
+                children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("img", {
+                    className: "h-1/2 ",
+                    src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/2xempty_cart_yfxml0"
+                })
             })
         ]
     });
@@ -45040,6 +45342,6 @@ $RefreshReg$(_c, "Cart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"4ed0b545dc7d1a84":"62sf7","92e50d1422ce26d8":"5RXlr","7c4152ef60a117b4":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9A7zD","1xC6H","2kQhy"], "2kQhy", "parcelRequire21de")
+},{"4ed0b545dc7d1a84":"62sf7","92e50d1422ce26d8":"5RXlr","bb7c6fd96ae74e05":"icYMm","7c4152ef60a117b4":"6AEwr","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9A7zD","1xC6H","2kQhy"], "2kQhy", "parcelRequire21de")
 
 //# sourceMappingURL=index.7271efb6.js.map
