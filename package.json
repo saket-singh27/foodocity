@@ -2,12 +2,10 @@
   "name": "namastereact",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
     "test": "jest",
-    "watch-test": "jest --watch",
-    "build": "react-scripts build index.html"
+    "watch-test": "jest --watch"
   },
   "author": "",
   "license": "ISC",
